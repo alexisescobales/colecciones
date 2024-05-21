@@ -1,36 +1,6 @@
 <?php
 require_once('./php_librarys/bd.php');
 
-// Obtener los equipos disponibles para la lista desplegable
-function selectEquipos() {
-    $conexion = openBd();
-
-    $sentenciaText = "SELECT id, nombre FROM equipo";
-    $sentencia = $conexion->prepare($sentenciaText);
-    $sentencia->execute();
-
-    $resultado = $sentencia->fetchAll(PDO::FETCH_ASSOC);
-
-    $conexion = closeBd();
-
-    return $resultado;
-}
-
-// Obtener las competiciones disponibles para la lista desplegable
-function selectCompeticiones() {
-    $conexion = openBd();
-
-    $sentenciaText = "SELECT id, nombre FROM competiciones";
-    $sentencia = $conexion->prepare($sentenciaText);
-    $sentencia->execute();
-
-    $resultado = $sentencia->fetchAll(PDO::FETCH_ASSOC);
-
-    $conexion = closeBd();
-
-    return $resultado;
-}
-
 $equipos = selectEquipos();
 $competiciones = selectCompeticiones();
 ?>
@@ -85,3 +55,17 @@ $competiciones = selectCompeticiones();
 </body>
 
 </html>
+
+<style>
+    body{
+        background-image: url(./img/futbol.png);
+    }
+
+    h1{
+        color: white;
+    }
+
+    form{
+        color: white;
+    }
+</style>

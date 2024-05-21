@@ -74,3 +74,17 @@ function isChecked($competicionId, $futbolistaCompeticiones) {
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
+
+<style>
+    body{
+        background-image: url(./img/futbol.png);
+    }
+
+    h1{
+        color: white;
+    }
+
+    form{
+        color: white;
+    }
+</style>
